@@ -19,5 +19,13 @@ posts = [
 def index_page(request: HttpRequest) -> HttpResponse:
     context = {
         'articles': posts,
+        'page': 'index',
     }
     return render(request, 'index.html', context=context)
+
+
+def about_page(request: HttpRequest) -> HttpResponse:
+    context = {
+        'page': 'about',
+    }
+    return render(request, 'about.html', context=context)
