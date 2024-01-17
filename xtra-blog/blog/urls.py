@@ -11,6 +11,7 @@ urlpatterns = [
     path('home/', v.index_page, name='homepage'),
 
     path('about/', v.about_page, name='about'),
+    path('contact/', v.contact_page, name='contact'),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
